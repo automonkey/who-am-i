@@ -1,6 +1,8 @@
 # who-am-i
 
-FIXME
+Clojure and Google Auth playground project.
+
+A basic OpenID Connect webapp to find out who you are by logging in with Google credentials.
 
 ## Prerequisites
 
@@ -16,4 +18,4 @@ To start a web server for the application, run:
 
 ## License
 
-Copyright © 2014 FIXME
+Copyright © 2014 Will Benyon

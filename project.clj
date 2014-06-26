@@ -9,5 +9,7 @@
   :uberjar-name "who-am-i.jar"
   :min-lein-version "2.0.0"
   :profiles
-  {:dev {:dependencies [[javax.servlet/servlet-api "2.5"]
+  {:dev {:source-paths ["./dev"]
+         :dependencies [[javax.servlet/servlet-api "2.5"]
+                        [org.clojure/tools.namespace "0.2.4"]
                         [ring-mock "0.1.5"]]}})

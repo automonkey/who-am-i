@@ -4,9 +4,12 @@
 
 (defonce app nil)
 
+(def config
+  {:auth-base-url "https://some-url"})
+
 (defn go []
   (alter-var-root #'app
-                  (constantly (boot/-main 3000))))
+                  (constantly (boot/-main 3000 config))))
 
 (defn stop []
   (.stop app))

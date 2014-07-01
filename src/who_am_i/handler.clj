@@ -4,10 +4,11 @@
             [compojure.handler :as handler]
             [compojure.route :as route]))
 
-(defroutes app-routes
-  (GET "/" [] (html/signin-page))
-  (route/resources "/")
-  (route/not-found "Not Found"))
+(defn app-routes [cfg]
+  (routes
+   (GET "/" [] (html/signin-page (:auth-base-url cfg)))
+   (route/resources "/")
+   (route/not-found "Not Found")))
 
-(def app
-  (handler/site app-routes))
+(defn app [cfg]
+  (handler/site (app-routes cfg)))
